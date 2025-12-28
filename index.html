@@ -65,12 +65,87 @@
     `<a href="mailto:agustincantautor@gmail.com">${user}@${domain}</a>`;
 </script>
 
-<iframe 
-  width="560" 
-  height="315" 
-  src="https://www.youtube.com/embed/https://youtu.be/h7DfWB1nbK8"
-  title="YouTube video player" 
-  frameborder="0" 
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-  allowfullscreen>
-</iframe>
+<section class="video-section">
+  <h2>Live Performances</h2>
+  <p class="subtitle">Selected moments on stage and in studio</p>
+
+  <div class="video-grid">
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID_1?rel=0" 
+        title="YouTube video"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/https://youtu.be/h7DfWB1nbK8?si=8mRtJtxWRZLkVkhb_2?rel=0" 
+        title="YouTube video"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/VIDEO_ID_3?rel=0" 
+        title="YouTube video"
+        frameborder="0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .video-section {
+    background-color: #0e0e0e;
+    padding: 80px 10%;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: 'Georgia', serif;
+  }
+
+  .video-section h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+
+  .video-section .subtitle {
+    font-size: 16px;
+    color: #b3b3b3;
+    margin-bottom: 50px;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+  }
+
+  .video-wrapper:hover {
+    transform: scale(1.02);
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
